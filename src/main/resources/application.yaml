@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: spring-batch-demo
+  datasource:
+    url: jdbc:postgresql://localhost:5432/spring_batch_demo
+    username: springbatchdemo
+    password: springbatchdemo
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 10  # Adjust as necessary
+      minimum-idle: 2
+      idle-timeout: 10000
+      connection-timeout: 20000
+      pool-name: HikariPool
+      schema: spring_batch_demo
+
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        default_schema: spring_batch_demo
+  batch:
+    jdbc:
+      initialize-schema: always
+    job:
+      enabled: false
+
+server:
+  port: 8080
+
+logging:
+  level:
+    root: INFO

@@ -1,0 +1,10 @@
+services:
+  db:
+    image: postgres:latest
+    container_name: postgres_container
+    environment:
+      POSTGRES_USER: springbatchdemo
+      POSTGRES_PASSWORD: springbatchdemo
+      POSTGRES_DB: spring_batch_demo
+    ports:
+      - "5432:5432"
