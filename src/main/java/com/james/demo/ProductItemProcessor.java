@@ -9,7 +9,7 @@ import java.util.UUID;
 @Component
 public class ProductItemProcessor implements ItemProcessor<Product, Product> {
     @Override
-    public Product process(Product item) throws Exception {
+    public Product process(Product item) {
         item.setId(UUID.randomUUID());
         return item;
     }

@@ -19,6 +19,10 @@ spring:
     properties:
       hibernate:
         default_schema: spring_batch_demo
+  cloud:
+    aws:
+      region:
+        static: ap-southeast-2
   batch:
     jdbc:
       initialize-schema: always
